@@ -1,0 +1,13 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+test_route:
+    path: /gtfo/
+    controller: App\Controller\CatalogController::halfIndex
+
+catalog_route:
+    path: /stalker/{siteSection}/{categoryPath}/
+    controller: App\Controller\CatalogController::index
+    requirements:
+        siteSection: 'catalog|discount'
+        catgeoryPath: '([\d\w-]+\/*?){2,4}'
