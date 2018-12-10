@@ -6,7 +6,7 @@ test_route:
     controller: App\Controller\CatalogController::halfIndex
 
 catalog_route:
-    path: /stalker/{siteSection}/{categoryPath}/
+    path: /{siteSection}/{categoryPath}/
     controller: App\Controller\CatalogController::index
     requirements:
         siteSection: 'catalog|discount'
